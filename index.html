@@ -112,175 +112,174 @@ button{
 
 <body>
 
-<audio id="music" loop>
-    <source src="./Musica/Ed_Sheeran_Photograph.mp3" type="audio/mp3">
+<audio id="music" preload="auto">
+    <source src="Musica/Ed_Sheeran_Photograph.mp3">
 </audio>
 
-<!-- PÁGINA INICIAL -->
+<!-- INÍCIO -->
 <div class="page active">
-<div class="content">
-<h1>💖 Um convite especial 💖</h1>
-<p>Clica para começar…</p>
-<button class="next" onclick="start()">Começar</button>
-</div>
+  <div class="content">
+    <h1>💖 Um convite especial 💖</h1>
+    <p>Clica para começar…</p>
+    <button class="next" onclick="start()">Começar</button>
+  </div>
 </div>
 
 <!-- PÁGINA 1 -->
 <div class="page">
-<div class="background"></div>
-<div class="content">
-<h1>Eu te amo</h1>
-<p>
-Nessas fotos a gente tava tão diferente, não tinha aqui nessa casa para estressar,
-tinha menos gente pra ficar de olho grande na nossa vida.<br><br>
-
-O que a gente precisamos fazer para ficarmos 100% novamente,
-sem coisas tristes, sem brigar?<br><br>
-
-Só uma pergunta, de mim que não quer perder você nunca,
-a melhor coisa que já me aconteceu.
-</p>
-<button class="next" onclick="nextPage()">Continuar 💕</button>
-</div>
+  <div class="background"></div>
+  <div class="content">
+    <h1>Eu te amo</h1>
+    <p>
+      Nessas fotos a gente tava tão diferente, não tinha aqui nessa casa para estressar,
+      tinha menos gente pra ficar de olho grande na nossa vida.<br><br>
+      O que a gente precisamos fazer para ficarmos 100% novamente,
+      sem coisas tristes, sem brigar?<br><br>
+      Só uma pergunta, de mim que não quer perder você nunca,
+      a melhor coisa que já me aconteceu.
+    </p>
+    <button class="next" onclick="nextPage()">Continuar 💕</button>
+  </div>
 </div>
 
 <!-- PÁGINA 2 -->
 <div class="page">
-<div class="background"></div>
-<div class="content">
-<h1>Mesmo entre brigas…</h1>
-<p>
-Mesmo entre brigas, discussões, DESENTENDIMENTOSSS,
-ficar sem você não é o que eu quero.<br><br>
-
-Posso ser chato, birrento (não é cobrança, ataque, nem nada),
-eu não sou eles do passado e não falo pra te atacar,
-não estou contra você.<br><br>
-
-Obrigado por ouvir algumas delas, tentar entender,
-ser paciente, até porque às vezes,
-mesmo fazendo diferente do que pedi,
-você tentou atender ao que eu queria.<br><br>
-
-Eu te amo.
-</p>
-<button class="next" onclick="nextPage()">Continuar 💗</button>
-</div>
+  <div class="background"></div>
+  <div class="content">
+    <h1>Mesmo entre brigas…</h1>
+    <p>
+      Mesmo entre brigas, discussões, DESENTENDIMENTOSSS,
+      ficar sem você não é o que eu quero.<br><br>
+      Posso ser chato, birrento (não é cobrança, ataque, nem nada),
+      eu não sou eles do passado e não falo pra te atacar,
+      não estou contra você.<br><br>
+      Obrigado por ouvir, tentar entender, ser paciente.<br><br>
+      Eu te amo.
+    </p>
+    <button class="next" onclick="nextPage()">Continuar 💗</button>
+  </div>
 </div>
 
 <!-- PÁGINA 3 -->
 <div class="page">
-<div class="background"></div>
-<div class="content">
-<h1>Eu te amo muito</h1>
-<p>
-Escrevi de novo mesmo, porque eu te amo muito mesmo.<br><br>
+  <div class="background"></div>
+  <div class="content">
+    <h1>Eu te amo muito</h1>
+    <p>
+      Nunca vou te deixar, NUNCA.<br>
+      Provavelmente eu sou a sua maldição 😂,
+      não desgrudo de você por nada
+      e eu adoro isso.
+    </p>
 
-Nunca vou te deixar, NUNCA.<br>
-Provavelmente eu sou a sua maldição 😂,
-não desgrudo de você por nada
-e eu adoro isso, grudar em você.
-</p>
+    <h1>💘 14/02 💘</h1>
+    <p>Você aceita sair comigo?</p>
 
-<h1>💘 14/02 💘</h1>
-<p>Você aceita sair comigo?</p>
-
-<button class="glow" onclick="aceitou()">Sim 💖</button>
-<br><br>
-<button id="noBtn">Não 😅</button>
-</div>
+    <button class="glow" onclick="aceitou()">Sim 💖</button>
+    <br><br>
+    <button id="noBtn">Não 😅</button>
+  </div>
 </div>
 
 <!-- FINAL -->
 <div class="page">
-<div class="content">
-<h1>Sou feliz ao seu lado</h1>
-<p>Obrigado por existir 💖</p>
+  <div class="content">
+    <h1>Sou feliz ao seu lado</h1>
+    <p>Obrigado por existir 💖</p>
 
-<div class="gallery">
+    <div class="gallery">
+      <img src="Fotos/Foto1.jpg">
+      <img src="Fotos/Foto3.jpg">
+      <img src="Fotos/Foto5.jpg">
+      <img src="Fotos/Foto6.jpg">
+      <img src="Fotos/Foto7.jpg">
+      <img src="Fotos/Foto8.jpg">
+      <img src="Fotos/Foto9.jpg">
+      <img src="Fotos/Foto10.jpg">
+      <img src="Fotos/Foto11.jpg">
+    </div>
+  </div>
+</div>
+
 <script>
-for(let i=1;i<=11;i++){
-    document.write(`<img src="./Fotos/Foto${i}.JPG">`);
-}
-</script>
-</div>
-</div>
-</div>
+let pageIndex = 0;
+const pages = document.querySelectorAll('.page');
+const backgrounds = document.querySelectorAll('.background');
+const music = document.getElementById('music');
 
-<script>
-let pageIndex=0;
-const pages=document.querySelectorAll('.page');
-const backgrounds=document.querySelectorAll('.background');
-const music=document.getElementById('music');
-
-const fotos=[
-'./Fotos/Foto1.JPG','./Fotos/Foto3.JPG',
-'./Fotos/Foto5.JPG','./Fotos/Foto6.JPG',
-'./Fotos/Foto7.JPG','./Fotos/Foto8.JPG','./Fotos/Foto9.JPG',
-'./Fotos/Foto10.JPG','./Fotos/Foto11.JPG'
+const fotos = [
+  'Fotos/Foto1.jpg',
+  'Fotos/Foto3.jpg',
+  'Fotos/Foto5.jpg',
+  'Fotos/Foto6.jpg',
+  'Fotos/Foto7.jpg',
+  'Fotos/Foto8.jpg',
+  'Fotos/Foto9.jpg',
+  'Fotos/Foto10.jpg',
+  'Fotos/Foto11.jpg'
 ];
 
 function start(){
-    music.volume = 0.6;
-    music.play().catch(()=>{
-        document.body.addEventListener('click',()=>music.play(),{once:true});
-    });
-    nextPage();
+  music.volume = 0.6;
+  music.play().catch(()=>{});
+  nextPage();
 }
 
 function nextPage(){
-    pages[pageIndex].classList.remove('active');
-    pageIndex++;
-    pages[pageIndex].classList.add('active');
+  pages[pageIndex].classList.remove('active');
+  pageIndex++;
+  pages[pageIndex].classList.add('active');
 }
 
-let i=0;
+let i = 0;
 setInterval(()=>{
-    backgrounds.forEach(bg=>{
-        bg.style.backgroundImage=`url('${fotos[i]}')`;
-    });
-    i=(i+1)%fotos.length;
-},4000);
+  backgrounds.forEach(bg=>{
+    bg.style.backgroundImage = `url('${fotos[i]}')`;
+  });
+  i = (i + 1) % fotos.length;
+}, 4000);
 
-// Botão NÃO: começa normal, depois foge
-const noBtn=document.getElementById('noBtn');
-let ativado=false;
+// Botão NÃO foge
+const noBtn = document.getElementById('noBtn');
+let ativado = false;
 
 noBtn.addEventListener('mouseenter',()=>ativado=true);
 
 document.addEventListener('mousemove',e=>{
-    if(!ativado) return;
-    const rect=noBtn.getBoundingClientRect();
-    const dx=Math.abs(e.clientX-(rect.left+rect.width/2));
-    const dy=Math.abs(e.clientY-(rect.top+rect.height/2));
-    if(dx<120 && dy<60){
-        noBtn.style.position='absolute';
-        noBtn.style.left=Math.random()*70+'%';
-        noBtn.style.top=Math.random()*70+'%';
-    }
+  if(!ativado) return;
+  const rect = noBtn.getBoundingClientRect();
+  const dx = Math.abs(e.clientX - (rect.left + rect.width/2));
+  const dy = Math.abs(e.clientY - (rect.top + rect.height/2));
+  if(dx < 120 && dy < 60){
+    noBtn.style.position='absolute';
+    noBtn.style.left=Math.random()*70+'%';
+    noBtn.style.top=Math.random()*70+'%';
+  }
 });
 
+// Corações
 setInterval(()=>{
-    const h=document.createElement('div');
-    h.className='heart';
-    h.innerHTML='💖';
-    h.style.left=Math.random()*100+'vw';
-    h.style.animationDuration=5+Math.random()*5+'s';
-    document.body.appendChild(h);
-    setTimeout(()=>h.remove(),10000);
+  const h=document.createElement('div');
+  h.className='heart';
+  h.innerHTML='💖';
+  h.style.left=Math.random()*100+'vw';
+  h.style.animationDuration=5+Math.random()*5+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),10000);
 },500);
 
+// Sakura
 setInterval(()=>{
-    const s=document.createElement('div');
-    s.className='sakura';
-    s.style.left=Math.random()*100+'vw';
-    s.style.animationDuration=6+Math.random()*6+'s';
-    document.body.appendChild(s);
-    setTimeout(()=>s.remove(),12000);
+  const s=document.createElement('div');
+  s.className='sakura';
+  s.style.left=Math.random()*100+'vw';
+  s.style.animationDuration=6+Math.random()*6+'s';
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(),12000);
 },700);
 
 function aceitou(){
-    nextPage();
+  nextPage();
 }
 </script>
 
